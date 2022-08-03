@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\CardsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+// darkstories.com/api/cards
+Route::get('cards', [CardsController::class, "index"]);
+Route::get('cards/random', [CardsController::class, "getRandomCard"]);
