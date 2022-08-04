@@ -18,4 +18,12 @@ class CardsController extends Controller
 
         return response($card, 200);
     }
+
+    public function push() {
+
+        shell_exec("cd /www/wwwroot/34.224.32.176/darkStories-api");
+        shell_exec("git pull");
+
+        return response("OK", 200);
+    }
 }
