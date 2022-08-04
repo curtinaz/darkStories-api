@@ -18,4 +18,14 @@ class CardsController extends Controller
 
         return response($card, 200);
     }
+
+    public function create(Request $req) {
+        $card = Card::create([
+            "title" => $req->title,
+            "description" => $req->description,
+            "answer" => $req->answer
+        ]);
+
+        return response($card, 200);
+    }
 }
